@@ -1,25 +1,41 @@
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="700">
-
-# 📄 PDF Text Extraction & Summarization System
-
-<img src="https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white">
-<img src="https://img.shields.io/badge/PySpark-3.5.0-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white">
-<img src="https://img.shields.io/badge/Cohere-command--r--plus-6236FF?style=for-the-badge&logoColor=white">
-<img src="https://img.shields.io/badge/Gradio-UI-FF7C00?style=for-the-badge&logo=gradio&logoColor=white">
-<img src="https://img.shields.io/badge/Grafana-Monitoring-F46800?style=for-the-badge&logo=grafana&logoColor=white">
-<img src="https://img.shields.io/badge/Prometheus-Metrics-E6522C?style=for-the-badge&logo=prometheus&logoColor=white">
-
-<br><br>
-
-**Enterprise-grade PDF intelligence platform — ETL pipeline · AI summarization · real-time monitoring**
-
-*Case Study Q16 · Data Engineering · NLP · Performance Monitoring*
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 <br>
 
-[🚀 Quick Start](#-quick-start) · [📖 Usage Guide](#-usage-guide) · [📊 Grafana Dashboard](#-grafana-dashboard) · [🛠️ Troubleshooting](#-troubleshooting)
+# 📄 PDF Text Extraction & Summarization System
+
+<br>
+
+<img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white">
+<img src="https://img.shields.io/badge/PySpark-3.5.0-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white">
+<img src="https://img.shields.io/badge/Cohere-command--r--plus-6236FF?style=for-the-badge&logoColor=white">
+<img src="https://img.shields.io/badge/Gradio-UI-FF7C00?style=for-the-badge&logo=gradio&logoColor=white">
+<img src="https://img.shields.io/badge/Prometheus-Metrics-E6522C?style=for-the-badge&logo=prometheus&logoColor=white">
+<img src="https://img.shields.io/badge/Grafana-Dashboard-F46800?style=for-the-badge&logo=grafana&logoColor=white">
+
+<br><br>
+
+<img src="https://img.shields.io/badge/ETL-Pipeline-blue?style=flat-square">
+<img src="https://img.shields.io/badge/NLP-Summarization-green?style=flat-square">
+<img src="https://img.shields.io/badge/Domain-Aware%20Prompts-purple?style=flat-square">
+<img src="https://img.shields.io/badge/Flesch--Kincaid-Metrics-orange?style=flat-square">
+<img src="https://img.shields.io/badge/License-MIT-yellow?style=flat-square">
+
+<br><br>
+
+> **Enterprise-grade PDF intelligence platform — ETL pipeline · AI summarization · real-time monitoring**
+>
+> *Case Study Q16 · Data Engineering · NLP · Performance Monitoring*
+
+<br>
+
+[🚀 Quick Start](#-quick-start) &nbsp;·&nbsp; [📖 Usage Guide](#-usage-guide) &nbsp;·&nbsp; [📊 Grafana Dashboard](#-grafana-dashboard) &nbsp;·&nbsp; [🛠️ Troubleshooting](#-troubleshooting)
+
+<br>
+
+<img src="https://user-images.githubusercontent.com/74038190/212748842-9fcbad5b-6173-4175-8a61-521f3dbb7514.gif" width="500">
 
 </div>
 
@@ -31,13 +47,13 @@
 
 This system transforms a large collection of PDF documents into structured intelligence through three integrated layers:
 
-**1. PySpark ETL Pipeline**
+**🔧 1. PySpark ETL Pipeline**
 Processes thousands of PDFs in parallel. Classifies each by domain — legal, technical, research, or general — and computes Flesch-Kincaid reading-level metrics for both the original document and its AI-generated summary.
 
-**2. Cohere AI Summarization**
+**🤖 2. Cohere AI Summarization**
 Uses domain-aware prompt templates derived directly from the ETL classification to generate three summary levels per document: one-sentence abstract, executive paragraph, and bullet-point key findings.
 
-**3. Prometheus + Grafana Monitoring**
+**📊 3. Prometheus + Grafana Monitoring**
 A metrics exporter feeds live KPI panels in Grafana: reading level comparison (original vs summary) and daily processing volume by domain.
 
 <br clear="right">
@@ -46,22 +62,32 @@ A metrics exporter feeds live KPI panels in Grafana: reading level comparison (o
 
 ## 🌟 Key Features
 
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212749447-bfb7e725-6987-49d9-ae85-2015e3e7cc41.gif" width="600">
+</div>
+
+<br>
+
 | Feature | Details |
 |---------|---------|
-| **Dual PDF Extraction** | pdfplumber (primary) + PyMuPDF fallback for maximum compatibility |
-| **Domain Auto-Detection** | Keyword-frequency classifier → legal / technical / research / general |
-| **Domain-Aware Prompts** | ETL domain feeds directly into Cohere prompt templates |
-| **3-Level Summarization** | One-sentence abstract, executive summary, bullet-point findings |
-| **Flesch-Kincaid Metrics** | FK Grade + Reading Ease for both original and summary |
-| **Section Summarizer** | Keyword extraction OR paste custom text for targeted summaries |
-| **PySpark Scalability** | `local[*]` mode works on any laptop; scales to multi-node clusters |
-| **Parquet + CSV Output** | Structured ETL output ready for downstream analytics |
-| **Grafana Dashboard** | 7 KPI panels with Prometheus time-series metrics |
-| **One-Command Setup** | `python setup.py` installs everything and verifies the installation |
+| 🔍 **Dual PDF Extraction** | pdfplumber (primary) + PyMuPDF fallback for maximum compatibility |
+| 🏷️ **Domain Auto-Detection** | Keyword-frequency classifier → legal / technical / research / general |
+| 🎯 **Domain-Aware Prompts** | ETL domain feeds directly into Cohere prompt templates |
+| 📝 **3-Level Summarization** | One-sentence abstract, executive summary, bullet-point findings |
+| 📐 **Flesch-Kincaid Metrics** | FK Grade + Reading Ease for both original and summary |
+| 🔎 **Section Summarizer** | Keyword extraction OR paste custom text for targeted summaries |
+| ⚡ **PySpark Scalability** | `local[*]` mode works on any laptop; scales to multi-node clusters |
+| 💾 **Parquet + CSV Output** | Structured ETL output ready for downstream analytics |
+| 📈 **Grafana Dashboard** | 7 KPI panels with Prometheus time-series metrics |
+| 🛠️ **One-Command Setup** | `python setup.py` installs everything and verifies the installation |
 
 ---
 
 ## 🏗️ Architecture
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212748830-4c709398-a386-4761-84d7-9e10b98fbe6e.gif" width="500">
+</div>
 
 ```
 PDF Files (thousands)
@@ -132,17 +158,21 @@ Gradio UI          Prometheus Exporter
 
 ## 🚀 Quick Start
 
-<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif" width="500">
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/218265814-3c16485b-1a0c-4b4f-a2cd-a23b3e3e8a75.gif" width="500">
+</div>
+
+<br>
 
 ### Prerequisites — Install These First
 
 | Tool | Version | Download |
 |------|---------|---------|
-| **Python** | 3.10, 3.11, or 3.12 | [python.org/downloads](https://www.python.org/downloads/) |
-| **Java JDK 17** | 17 (recommended) | [adoptium.net](https://adoptium.net/temurin/releases/?version=17) |
-| **Git** | Any | [git-scm.com](https://git-scm.com/downloads) |
+| 🐍 **Python** | 3.10, 3.11, or 3.12 | [python.org/downloads](https://www.python.org/downloads/) |
+| ☕ **Java JDK 17** | 17 (recommended) | [adoptium.net](https://adoptium.net/temurin/releases/?version=17) |
+| 🔀 **Git** | Any | [git-scm.com](https://git-scm.com/downloads) |
 
-> ⚠️ **Java 23 users:** PySpark 3.5 has a compatibility issue with Java 23. Please install **Java 17** — it can coexist with other Java versions.
+> ⚠️ **Java 23 users:** PySpark 3.5 has a compatibility issue with Java 23. Please install **Java 17** — it can coexist with other Java versions on the same machine.
 
 ---
 
@@ -157,7 +187,7 @@ cd pdf-etl-summarization
 
 ### Step 2 — Create a Virtual Environment
 
-**Windows:**
+**Windows (PowerShell or Command Prompt):**
 ```cmd
 python -m venv venv
 venv\Scripts\activate
@@ -169,7 +199,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-> Your terminal prompt should now show `(venv)` — this means the virtual environment is active.
+> ✅ Your terminal prompt should now show `(venv)` — this means the virtual environment is active.
 
 ---
 
@@ -179,7 +209,7 @@ source venv/bin/activate
 python setup.py
 ```
 
-This single command does everything:
+This single command does **everything**:
 
 ```
 =========================================================
@@ -208,25 +238,47 @@ This single command does everything:
     http://localhost:7860
 ```
 
-> Takes **3–5 minutes** on first run due to PySpark installation.
+> ⏱️ Takes **3–5 minutes** on first run (PySpark is a large package).
 
 ---
 
-### Step 4 — Launch
+### Step 4 — Add Your PDFs *(Optional)*
+
+Copy any PDF files you want to analyze into:
+```
+data/sample_pdfs/
+```
+3 sample PDFs (legal contract, technical report, research paper) are already created automatically by the setup script.
+
+---
+
+### Step 5 — Launch the App
 
 ```bash
 python main.py ui
 ```
 
-**Open:** **[http://localhost:7860](http://localhost:7860)**
+**Open your browser and go to:**
+
+<div align="center">
+
+### 🌐 [http://localhost:7860](http://localhost:7860)
+
+</div>
+
+That's it! 🎉
 
 ---
 
 ## 📖 Usage Guide
 
-<img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="380">
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" width="500">
+</div>
 
-### Tab 1 — Full Document Summary
+<br>
+
+### 📋 Tab 1 — Full Document Summary
 
 1. Click **Upload PDF** and select any PDF file
 2. Choose a **Summary Style** from the dropdown:
@@ -237,64 +289,68 @@ python main.py ui
 4. View: domain detection, FK reading level, compression ratio, all 3 summaries
 5. **Download** all summaries as a `.txt` file
 
-**Example output metrics you will see:**
+**Example output you will see:**
 
 ```
-File Name    : research_paper.pdf
-Domain       : RESEARCH
-Pages        : 14
-Word Count   : 8,432
-FK Grade     : 14.2 → Advanced (Grade 11–14)
-Reading Ease : 38/100 → Difficult
-
-Summary Word Count   : 142
-Summary FK Grade     : 9.1 → Moderate (Grade 7–10)
-Summary Reading Ease : 61/100 → Fairly difficult
-Processing Time      : 4.3s
-
-Compression Ratio: 8,432 words → 142 words (98% reduction)
+╔══════════════════════════════════════════════════════════╗
+║  Document Metrics                                        ║
+╠══════════════════════════════════════════════════════════╣
+║  File Name    : research_paper.pdf                       ║
+║  Domain       : RESEARCH                                 ║
+║  Pages        : 14                                       ║
+║  Word Count   : 8,432                                    ║
+║  FK Grade     : 14.2 → Advanced (Grade 11–14)            ║
+║  Reading Ease : 38/100 → Difficult                       ║
+╠══════════════════════════════════════════════════════════╣
+║  Summary Metrics                                         ║
+╠══════════════════════════════════════════════════════════╣
+║  Summary Words     : 142                                 ║
+║  Summary FK Grade  : 9.1 → Moderate (Grade 7–10)        ║
+║  Summary Ease      : 61/100 → Fairly difficult           ║
+║  Processing Time   : 4.3s                                ║
+╠══════════════════════════════════════════════════════════╣
+║  Compression: 8,432 words → 142 words  (98% reduction)  ║
+╚══════════════════════════════════════════════════════════╝
 ```
 
 ---
 
-### Tab 2 — Section-Specific Summary
+### 🔍 Tab 2 — Section-Specific Summary
 
 1. (Optional) Upload a PDF
 2. **Type a keyword** — e.g., `Introduction`, `Conclusion`, `Methodology`
    — the system finds and extracts that section from the PDF
-   OR
-   **Paste section text** directly into the text box
-3. Select a summary style
-4. Click **Summarize Section**
+   OR **paste section text** directly into the text box
+3. Select a summary style and click **Summarize Section**
 
 ---
 
-### Tab 3 — Analytics & Charts
+### 📊 Tab 3 — Analytics & Charts
 
-- **Panel 1** — Bar chart comparing FK Grade Level: Original document vs Generated summary
+- **Panel 1** — Bar chart: FK Grade Level of original document vs generated summary
 - **Panel 2** — Domain distribution pie chart + document size chart
 - Charts auto-populate after processing in Tab 1
-- If the ETL pipeline has been run, the domain chart shows real distribution data
+- After running the ETL pipeline, the domain chart shows real distribution across all PDFs
 
 ---
 
-### Tab 4 — Run ETL Pipeline
+### ⚙️ Tab 4 — Run ETL Pipeline
 
 1. Enter the PDF folder path (default: `data/sample_pdfs`)
 2. Click **Run PySpark ETL Pipeline**
 3. Outputs saved to:
-   - `data/processed/pdf_metrics.parquet` — for Grafana / analysis
-   - `data/processed/pdf_metrics.csv` — human-readable inspection
+   - `data/processed/pdf_metrics.parquet` — for Grafana / downstream analysis
+   - `data/processed/pdf_metrics.csv` — human-readable
 
 **ETL output table columns:**
 
 | Column | Description |
 |--------|-------------|
 | `file_name` | Original PDF filename |
-| `domain` | Classified domain (legal/technical/research/general) |
+| `domain` | Detected domain (legal/technical/research/general) |
 | `word_count` | Total word count |
 | `sentence_count` | Total sentence count |
-| `avg_words_per_sentence` | Avg words per sentence |
+| `avg_words_per_sentence` | Average words per sentence |
 | `reading_level_score` | Flesch-Kincaid Grade Level |
 | `reading_ease_score` | Flesch Reading Ease (0–100) |
 | `number_of_pages` | Page count |
@@ -302,63 +358,76 @@ Compression Ratio: 8,432 words → 142 words (98% reduction)
 
 ---
 
-### Tab 5 — System Architecture
-
-Full architecture diagram, metrics reference table, and domain-aware prompt system documentation.
-
----
-
 ## 🔬 How Domain-Aware Prompting Works
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212749171-b84692a8-2b04-4e3b-93ca-ac14705da224.gif" width="400">
+</div>
+
+<br>
 
 The ETL pipeline classifies each PDF by counting domain-specific keyword frequencies:
 
 | Domain | Sample Keywords |
 |--------|----------------|
-| **Legal** | agreement, contract, clause, liability, indemnification, jurisdiction, plaintiff |
-| **Technical** | algorithm, architecture, deployment, API, latency, throughput, implementation |
-| **Research** | hypothesis, methodology, findings, conclusion, dataset, experiment, citation |
-| **General** | (default when no domain reaches threshold) |
+| ⚖️ **Legal** | agreement, contract, clause, liability, indemnification, jurisdiction, plaintiff |
+| ⚙️ **Technical** | algorithm, architecture, deployment, API, latency, throughput, implementation |
+| 🔬 **Research** | hypothesis, methodology, findings, conclusion, dataset, experiment, citation |
+| 📄 **General** | (default when no domain reaches threshold) |
 
-The detected domain then selects a specialized Cohere prompt template:
+The detected domain selects a specialized Cohere prompt:
 
 ```
-Legal document detected → Cohere prompt:
-"You are a legal analyst. Focus on: key parties, obligations,
-liability clauses, effective dates, and governing jurisdiction..."
+Legal document detected →
+  "You are a legal analyst. Focus on key parties, obligations,
+   liability clauses, effective dates, and governing jurisdiction..."
 
-Technical document detected → Cohere prompt:
-"You are a technical writer. Focus on: system architecture,
-performance metrics, design decisions, and requirements..."
+Technical document detected →
+  "You are a technical writer. Focus on system architecture,
+   performance metrics, design decisions, and requirements..."
+
+Research document detected →
+  "You are a research analyst. Focus on the research question,
+   methodology, key findings, and implications..."
 ```
 
-This domain-routing step is what makes the summaries significantly more accurate than a generic prompt.
+This domain-routing step makes summaries significantly more accurate than using a single generic prompt.
 
 ---
 
-## ⚙️ Run Modes
+## ⚙️ All Run Modes
 
 ```bash
-python main.py ui        # Launch Gradio web interface (default)
+python main.py ui        # Launch Gradio web interface  (default)
 python main.py etl       # Run PySpark ETL batch pipeline only
 python main.py monitor   # Start Prometheus metrics exporter only
-python main.py all       # Run ETL then launch UI
+python main.py all       # Run ETL, then launch UI
 ```
 
 ---
 
 ## 📊 Grafana Dashboard
 
+<div align="center">
+<img src="https://user-images.githubusercontent.com/74038190/212284136-03988914-d899-44b4-b1d9-4eeccf656e44.gif" width="500">
+</div>
+
+<br>
+
 Import `monitoring/grafana_dashboard.json` into your Grafana instance.
 
 ### Setup Steps
 
-1. Start the metrics exporter:
-   ```bash
-   python main.py monitor
-   ```
-2. In Grafana: **Connections → Data Sources → Add → Prometheus**
-   - URL: `http://localhost:8000`
-3. **Dashboards → Import → Upload JSON file** → select `monitoring/grafana_dashboard.json`
+**1.** Start the Prometheus metrics exporter:
+```bash
+python main.py monitor
+```
+
+**2.** In Grafana: **Connections → Data Sources → Add → Prometheus**
+- URL: `http://localhost:8000`
+- Click **Save & Test**
+
+**3.** **Dashboards → Import → Upload JSON file** → select `monitoring/grafana_dashboard.json`
 
 ### 7 Dashboard Panels
 
@@ -379,30 +448,30 @@ Import `monitoring/grafana_dashboard.json` into your Grafana instance.
 ```
 pdf-etl-summarization/
 │
-├── main.py                        ← Entry point (etl / ui / monitor / all)
-├── config.py                      ← Paths, env vars, domain keywords
-├── setup.py                       ← One-command automated setup
-├── requirements.txt               ← 16 Python dependencies
-├── .env.example                   ← Template for API key
+├── 📄 main.py                     ← Entry point (etl / ui / monitor / all)
+├── ⚙️  config.py                  ← Paths, env vars, domain keywords
+├── 🛠️  setup.py                   ← One-command automated setup
+├── 📦 requirements.txt            ← 16 Python dependencies
+├── 🔑 .env.example                ← Template for API key
 │
-├── etl/
+├── 📂 etl/
 │   ├── pdf_extractor.py           ← pdfplumber + PyMuPDF extraction
 │   ├── transformations.py         ← Text cleaning + domain classification
 │   ├── metrics.py                 ← Flesch-Kincaid grade + ease score
 │   └── spark_pipeline.py          ← PySpark 4-step ETL pipeline
 │
-├── summarization/
-│   ├── cohere_client.py           ← Cohere API v5 client (command-r-plus)
+├── 📂 summarization/
+│   ├── cohere_client.py           ← Cohere API v5 (command-r-plus-08-2024)
 │   └── multi_level_summary.py     ← 3-level domain-aware summarization
 │
-├── ui/
+├── 📂 ui/
 │   └── gradio_app.py              ← Gradio Blocks UI (5 tabs + charts)
 │
-├── monitoring/
+├── 📂 monitoring/
 │   ├── metrics_writer.py          ← Prometheus exporter + Grafana JSON writer
 │   └── grafana_dashboard.json     ← 7-panel Grafana dashboard (import-ready)
 │
-└── data/
+└── 📂 data/
     ├── sample_pdfs/               ← Input PDFs (auto-created by setup.py)
     └── processed/                 ← ETL outputs: Parquet + CSV
 ```
@@ -411,21 +480,27 @@ pdf-etl-summarization/
 
 ## 🛠️ Troubleshooting
 
+<div align="center">
 <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="350">
+</div>
+
+<br>
 
 ### ❌ `Java not found` or `JAVA_HOME not set`
 
 1. Download JDK 17 from [adoptium.net](https://adoptium.net/temurin/releases/?version=17)
 2. Install it
-3. **Windows:** Search *Edit the system environment variables* → *Environment Variables* → *New* →
-   Name: `JAVA_HOME`, Value: `C:\Program Files\Eclipse Adoptium\jdk-17.x.x.x-hotspot`
-4. Restart your terminal and re-run setup
+3. **Windows:** Search *Edit the system environment variables* → *Environment Variables* → *New*:
+   - Name: `JAVA_HOME`
+   - Value: `C:\Program Files\Eclipse Adoptium\jdk-17.x.x.x-hotspot`
+4. Restart your terminal and re-run `python setup.py`
 
 ### ❌ `ModuleNotFoundError: No module named 'xyz'`
 
-Make sure your virtual environment is active, then reinstall:
+Make sure your virtual environment is active:
 ```bash
 venv\Scripts\activate        # Windows
+source venv/bin/activate     # macOS/Linux
 pip install -r requirements.txt
 ```
 
@@ -437,40 +512,40 @@ pip install "textstat>=0.7.4" setuptools
 
 ### ❌ `[Cohere Error] 401` or API key error
 
-- Check that your `.env` file exists in the project root and contains:
-  ```
-  COHERE_API_KEY=your_key_here
-  ```
-- Get a free API key at [dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys)
+Check that your `.env` file exists in the project root:
+```
+COHERE_API_KEY=your_actual_key_here
+```
+Get a free key at [dashboard.cohere.com/api-keys](https://dashboard.cohere.com/api-keys)
 
 ### ❌ PySpark `UnsupportedOperationException: getSubject` (Java 17/23)
 
-This is automatically handled by the pipeline via `JAVA_TOOL_OPTIONS`. If it still occurs:
+Auto-handled by the pipeline. If it still occurs:
 ```bash
 # Windows
 set JAVA_TOOL_OPTIONS=--add-opens java.base/javax.security.auth=ALL-UNNAMED
-python main.py etl
 
 # macOS/Linux
 export JAVA_TOOL_OPTIONS="--add-opens java.base/javax.security.auth=ALL-UNNAMED"
+
 python main.py etl
 ```
 
 ### ❌ Port 7860 already in use
 
 ```bash
-# Windows — find and kill the process
+# Windows
 netstat -ano | findstr :7860
 taskkill /PID <pid_number> /F
 
 # macOS/Linux
-lsof -i :7860
+lsof -i :7860 | grep LISTEN
 kill -9 <pid>
 ```
 
-### ❌ Empty or garbled text from a PDF
+### ❌ Empty or garbled text from PDF
 
-Some PDFs are scanned images — they need OCR which is not included. The system will fall back to PyMuPDF and extract what it can. For scanned PDFs, consider pre-processing with Tesseract OCR before running this system.
+Some PDFs are scanned images — they need OCR. The system extracts what it can via PyMuPDF. For scanned PDFs, pre-process with Tesseract OCR before running this pipeline.
 
 ---
 
@@ -478,13 +553,13 @@ Some PDFs are scanned images — they need OCR which is not included. The system
 
 | Decision | Reason |
 |----------|--------|
-| **pdfplumber** as primary extractor | Best text layout preservation for digital/structured PDFs |
-| **PyMuPDF** as automatic fallback | Handles encrypted, compressed, or malformed PDFs |
+| **pdfplumber** as primary | Best text layout preservation for digital/structured PDFs |
+| **PyMuPDF** as fallback | Handles encrypted, compressed, or malformed PDFs |
 | **`command-r-plus-08-2024`** pinned | `command-r-plus` (unpinned) was removed from Cohere in Sep 2025 |
 | **Domain-aware prompting** | Dramatically improves summary accuracy vs a generic prompt |
-| **Flesch-Kincaid on both** | Measures how well the summary reduces reading complexity |
-| **Prometheus → Grafana** | Industry-standard observability; no vendor lock-in |
-| **`local[*]` Spark mode** | Runs on any laptop; change master URL to scale to a cluster |
+| **FK metrics on both** | Measures how well the summary reduces reading complexity |
+| **Prometheus → Grafana** | Industry-standard observability stack; no vendor lock-in |
+| **`local[*]` Spark mode** | Runs on any laptop; change master URL to scale to a Hadoop cluster |
 | **Parquet output** | Columnar format — fast for large-scale downstream analytics |
 
 ---
@@ -493,17 +568,21 @@ Some PDFs are scanned images — they need OCR which is not included. The system
 
 <div align="center">
 
+<img src="https://skillicons.dev/icons?i=python,java,grafana,git&theme=dark" />
+
+<br><br>
+
 | Layer | Technology | Version |
 |-------|-----------|---------|
-| ETL Engine | Apache PySpark | 3.5.0 |
-| PDF Extraction | pdfplumber + PyMuPDF | 0.10.3 / 1.23.8 |
-| AI Summarization | Cohere API | v5 (command-r-plus-08-2024) |
-| Reading Metrics | textstat (Flesch-Kincaid) | ≥0.7.4 |
-| Web UI | Gradio + matplotlib | ≥4.19.2 / 3.8.2 |
-| Monitoring | Prometheus client | 0.19.0 |
-| Dashboard | Grafana | 10.x |
-| Storage | Apache Parquet + CSV | pyarrow 14.0.2 |
-| Language | Python | 3.10+ |
+| ⚡ ETL Engine | Apache PySpark | 3.5.0 |
+| 📄 PDF Extraction | pdfplumber + PyMuPDF | 0.10.3 / 1.23.8 |
+| 🤖 AI Summarization | Cohere API | v5 (command-r-plus-08-2024) |
+| 📐 Reading Metrics | textstat (Flesch-Kincaid) | ≥0.7.4 |
+| 🖥️ Web UI | Gradio + matplotlib | ≥4.19.2 / 3.8.2 |
+| 📡 Monitoring | Prometheus client | 0.19.0 |
+| 📊 Dashboard | Grafana | 10.x |
+| 💾 Storage | Apache Parquet + CSV | pyarrow 14.0.2 |
+| 🐍 Language | Python | 3.10+ |
 
 </div>
 
@@ -511,7 +590,7 @@ Some PDFs are scanned images — they need OCR which is not included. The system
 
 ## 📈 Sample Grafana Output
 
-After running `python main.py monitor` and importing the dashboard:
+After running `python main.py monitor` and importing the dashboard JSON:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -526,7 +605,7 @@ After running `python main.py monitor` and importing the dashboard:
 │   6 ┤  ████  ████  ████  ████ ░░░░ ░░░░ ░░░░ ░░░░          │
 │   0 └──────────────────────────────────────────────────     │
 │       legal  tech  rsch  gen  legal  tech  rsch  gen        │
-│       ← Original Documents →   ← Summaries (lower = better)│
+│       ←── Original Documents ───┤ ←── Summaries (lower) ──→│
 └─────────────────────────────────────────────────────────────┘
 
 ┌─────────────────────────────────────────────────────────────┐
@@ -538,7 +617,7 @@ After running `python main.py monitor` and importing the dashboard:
 │   40 ┤ │ ╰──╯  │  ╭──╮                                     │
 │    0 └─────────────────────────────────────────────────     │
 │       Mon   Tue   Wed   Thu   Fri                           │
-│       — legal  — technical  — research  — general           │
+│      ─ legal  ─ technical  ─ research  ─ general            │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -546,14 +625,16 @@ After running `python main.py monitor` and importing the dashboard:
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="500">
-
-**Built for Case Study Q16 — PDF Text Extraction and Summarization**
-
-*PySpark ETL · Cohere API · Gradio UI · Prometheus · Grafana Dashboard*
+<img src="https://user-images.githubusercontent.com/74038190/212284115-f47cd8ff-2ffb-4b04-b5bf-4d1c14c0247f.gif" width="600">
 
 <br>
 
-⭐ Star this repo if it helped you!
+**Built for Case Study Q16 — PDF Text Extraction and Summarization**
+
+*PySpark ETL · Cohere API · Gradio UI · Prometheus · Grafana*
+
+<br>
+
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 
 </div>
